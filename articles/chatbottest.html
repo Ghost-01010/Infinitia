@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-3 Chatbot</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#chat-container {
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.user {
+    background-color: #007BFF;
+    color: white;
+    text-align: right;
+}
+
+.bot {
+    background-color: #f0f0f0;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+</style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-log">
+            <div class="message bot">Chatbot: Hello! How can I assist you today?</div>
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message..." onkeypress="sendUserMessage(event)">
+    </div>
+    <script>
+        // Your GPT-3 API key
+const apiKey = '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';
+
+// Function to send a user message to the chatbot
+function sendUserMessage(event) {
+    if (event.key === "Enter") {
+        const userMessage = document.getElementById('user-input').value;
+        appendMessage('user', userMessage);
+        document.getElementById('user-input').value = "";
+
+        fetchBotResponse(userMessage);
+    }
+}
+
+// Function to append a message to the chat log
+function appendMessage(sender, message) {
+    const chatLog = document.getElementById('chat-log');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `message ${sender}`;
+    messageDiv.textContent = `${sender === 'user' ? 'You' : 'Chatbot'}: ${message}`;
+    chatLog.appendChild(messageDiv);
+}
+
+// Function to fetch a response from the GPT-3 API
+function fetchBotResponse(userMessage) {
+    fetch('https://api.openai.com/v1/engines/davinci/completions', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+            prompt: `You: ${userMessage}\nChatbot: `,
+            max_tokens: 50, // Adjust as needed
+        }),
+    })
+    .then(response => response.json())
+    .then(data => {
+        const botResponse = data.choices[0].text;
+        appendMessage('bot', botResponse);
+    })
+    .catch(error => console.error(error));
+}
+
+    </script>
+</body>
+</html>
