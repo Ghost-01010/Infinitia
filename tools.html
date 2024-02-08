@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools | Infinitia</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        .glass {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            /* Remove position: fixed; */
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            margin: 30px auto;
+            max-width: 600px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            transition: background-color 0.3s ease-in-out;
+            /* Remove position: fixed; */
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        nav a:hover {
+            opacity: 0.9;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin-top: 70px; /* Adjusted margin for better visibility on small screens */
+        }
+
+        nav a:link {
+            color: #18dfce;
+        }
+
+        #section1, #section2, #section3, #section4 {
+            text-align: center;
+            color: #fff;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .card {
+                max-width: 90%;
+            }
+        }
+    </style>
+
+    <!-- 16x16 pixel favicon -->
+<link rel="icon" href="Webpage\Icon.png" sizes="16x16" type="Icon/png">
+
+<!-- 32x32 pixel favicon -->
+<link rel="icon" href="Webpage\Icon.png" sizes="32x32" type="Icon/png">
+</head>
+<body>
+    <nav class="glass">
+        <a href="#section1" style="color: #18dfce;">Clock</a>
+        <a href="#section2" style="color: #18dfce;">Typing Test</a>
+        <a href="#section3" style="color: #18dfce;">Calculator</a>
+        <a href="#section4" style="color: #18dfce;">Magic for Developers</a>
+
+    </nav>
+
+    <div id="container">
+        <div id="section1" class="card glass">
+            <p>Lazy to watch the clock?</p>
+            <p>Just click!!!</p>
+            <p><a href="Tools/clock.html" style="color: #18dfce;">Clock</a></p>
+        </div>
+
+        <div id="section2" class="card glass">
+            <p>Do you know your typing speed?</p>
+            <p>Get to know it</p>
+            <p><a href="Tools/" style="color: #18dfce;">Start Typing Test</a></p>
+            </div>
+
+        <div id="section3" class="card glass">
+                <p>Do you have Calculator?</p>
+                <p>Don't have Calculator !! <br>Use it here.</p>
+                <p><a href="Tools/calculator.html" style="color: #18dfce;">Calculator</a></p>
+        </div>
+
+        <div id="section4" class="card glass">
+            <p>Are You a Developer?</p>
+            <p>Looking for cool effects that can be used for your website building.<br>Look it here.</p>
+            <p>Contact for the code of the effects shown there.</p>
+            <p><a href="Tools/magic.html" style="color: #18dfce;">Magic</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

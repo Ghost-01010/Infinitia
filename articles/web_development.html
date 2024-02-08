@@ -1,130 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            animation: changeBackground 10s linear infinite;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development | Infinitia</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
 
-        header {
-            background-color: #9b59b6;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    header {
+      background-color: #333;
+      padding: 15px;
+      text-align: center;
+      color: #fff;
+    }
 
-        }
-        
-        footer {
-            text-align: center;
-            color: #fff;
-        }
-        h1 {
-            font-size: 36px;
-        }
-        
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        
-        section {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+      padding: 10px;
+      animation: fadeIn 1s ease-out;
+    }
 
-        /* Style the text color change effect */
-        .color-changing-text {
-            font-size: 24px;
-            animation: changeTextColor 5s linear infinite;
-        }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      opacity: 0;
+      animation: fadeIn 1s ease-out;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    }
 
-        @keyframes changeTextColor {
-            0% { color: red; }
-            25% { color: blue; }
-            50% { color: green; }
-            75% { color: orange; }
-            100% { color: purple; }
-        }
+    #container {
+      display: flex;
+      flex-direction: column;
+    }
 
-        /* Style the background color change effect */
-        @keyframes changeBackground {
-            0% { background: #1b2838}; 
-            25% { background: #71368a}; 
-            50% { background: #b73225}; 
-            75% { background: #2078c1}; 
-            100% { background: #d5a309}; 
-        }
+    .card {
+      margin: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      background-color: #333;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-out;
+    }
 
-    </style>
+    h1, h2, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    #section1 {
+      background-color: #555;
+    }
+
+    #section2 {
+      background-color: #444;
+    }
+
+    #section3 {
+      background-color: #333;
+    }
+
+    #section4 {
+      background-color: #666;
+    }
+
+    #section5 {
+      background-color: #777;
+    }
+
+    /* Scroll Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+
+  <!-- 16x16 pixel favicon -->
+<link rel="icon" href="/Icon.png" sizes="16x16" type="Icon/png">
+
+<!-- 32x32 pixel favicon -->
+<link rel="icon" href="/Icon.png" sizes="32x32" type="Icon/png">
 </head>
+
 <body>
     <header>
-        <h1>Web Development</h1>
-        <p>Building the digital world, one line of code at a time.</p>
-    </header>
+        <h1>Web Development Hub</h1>
+      </header>
+    
+      <!-- Navigation Bar -->
+      <nav>
+        <a href="#section1">HTML</a>
+        <a href="#section2">CSS</a>
+        <a href="#section3">JavaScript</a>
+        <a href="#section4">Frontend Frameworks</a>
+        <a href="#section5">Backend Technologies</a>
+        <!-- Add more navigation links for additional sections -->
+      </nav>
+     
+  <div id="container">
+    <!-- HTML Section -->
+    <div id="section1" class="card">
+      <h2>HTML</h2>
+      <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. Learn the basic structure and elements of HTML to create the foundation of your web development knowledge.</p>
+      <!-- Additional Features -->
+      <h3>Features:</h3>
+      <ul>
+        <li>Simple and intuitive markup language</li>
+        <li>Wide browser support</li>
+        <li>Essential for building the structure of web pages</li>
+      </ul>
+      <!-- How to Learn -->
+      <h3>How to Learn:</h3>
+      <ul>
+        <li>Online courses and tutorials on HTML basics</li>
+        <li>Hands-on practice by creating simple web pages</li>
+        <li>Explore HTML documentation and references</li>
+        <li>Participate in coding exercises and projects</li>
+      </ul>
+      <button onclick="toggleSummary('htmlSummary')">Toggle Summary</button>
+      <p id="htmlSummary" style="display: none;">Master the essentials of HTML to build the structure of your web pages. Create well-formed documents with text, images, links, and interactive forms.</p>
+    </div>
 
-    <section>
-        <h2>What is Web Development?</h2>
-        <p class="color-changing-text">Web development is the process of creating and maintaining websites and web applications. It encompasses a wide range of tasks, including front-end development (designing and coding the user interface), back-end development (server-side scripting and databases), and full-stack development (combining both front-end and back-end skills).</p>
-    </section>
+    <!-- CSS Section -->
+    <div id="section2" class="card">
+      <h2>CSS</h2>
+      <p>CSS (Cascading Style Sheets) is a stylesheet language used for describing the presentation of a document written in HTML. Explore the styling capabilities of CSS to enhance the visual appeal of your web pages.</p>
+      <!-- Additional Features -->
+      <h3>Features:</h3>
+      <ul>
+        <li>Powerful styling language for web documents</li>
+        <li>Separation of content and presentation</li>
+        <li>Responsive design for various screen sizes</li>
+      </ul>
+      <!-- How to Learn -->
+      <h3>How to Learn:</h3>
+      <ul>
+        <li>Online courses and tutorials on CSS styling</li>
+        <li>Practice by styling HTML elements and layouts</li>
+        <li>Explore CSS frameworks for efficient styling</li>
+        <li>Learn about responsive design principles</li>
+      </ul>
+      <button onclick="toggleSummary('cssSummary')">Toggle Summary</button>
+      <p id="cssSummary" style="display: none;">Transform the look and feel of your web pages with CSS. Learn to style elements, create layouts, and implement responsive design for a seamless user experience.</p>
+    </div>
 
-    <section>
-        <h2>Key Technologies in Web Development</h2>
-        <p class="color-changing-text">Web development involves a variety of technologies and programming languages, such as:</p>
-        <ul>
-            <li>HTML (Hypertext Markup Language)</li>
-            <li>CSS (Cascading Style Sheets)</li>
-            <li>JavaScript</li>
-            <li>PHP</li>
-            <li>Python</li>
-            <li>Ruby</li>
-        </ul>
-    </section>
+    <!-- JavaScript Section -->
+    <div id="section3" class="card">
+      <h2>JavaScript</h2>
+      <p>JavaScript is a high-level programming language that enables interactive web pages. Dive into the world of JavaScript to add dynamic behavior and functionality to your web projects.</p>
+      <!-- Additional Features -->
+      <h3>Features:</h3>
+      <ul>
+        <li>Client-side scripting language for web development</li>
+        <li>Allows for dynamic content and interactivity</li>
+        <li>Extensive ecosystem with frameworks and libraries</li>
+      </ul>
+      <!-- How to Learn -->
+      <h3>How to Learn:</h3>
+      <ul>
+        <li>Online courses on JavaScript fundamentals</li>
+        <li>Hands-on coding by building interactive web elements</li>
+        <li>Explore popular JavaScript frameworks (e.g., React, Vue)</li>
+        <li>Practice asynchronous programming and DOM manipulation</li>
+      </ul>
+      <button onclick="toggleSummary('jsSummary')">Toggle Summary</button>
+      <p id="jsSummary" style="display: none;">Empower your web pages with JavaScript. Learn to manipulate the DOM, handle events, and interact with servers to create dynamic and responsive web applications.</p>
+    </div>
 
-    <section>
-        <h2>Front-End Development</h2>
-        <p class="color-changing-text">Front-end development focuses on creating the visual elements of a website that users interact with directly. It involves HTML for structure, CSS for styling, and JavaScript for interactivity.</p>
-    </section>
+    <!-- Frontend Frameworks Section -->
+    <div id="section4" class="card">
+      <h2>Frontend Frameworks</h2>
+      <p>Frontend frameworks like React, Vue, and Angular provide powerful tools for building modern web applications. Explore the features and advantages of popular frontend frameworks.</p>
+      <!-- Additional Features -->
+      <h3>Features:</h3>
+      <ul>
+        <li>Component-based architecture for modular development</li>
+        <li>Efficient state management for complex applications</li>
+        <li>Enhanced developer tools and community support</li>
+      </ul>
+      <!-- How to Learn -->
+      <h3>How to Learn:</h3>
+      <ul>
+        <li>Complete tutorials on React, Vue, or Angular basics</li>
+        <li>Build projects to practice component-based development</li>
+        <li>Explore state management techniques in large applications</li>
+        <li>Engage with the community and contribute to open-source projects</li>
+      </ul>
+      <button onclick="toggleSummary('frontendSummary')">Toggle Summary</button>
+      <p id="frontendSummary" style="display: none;">Take your web development skills to the next level with frontend frameworks. Build interactive and efficient web applications using React, Vue, or Angular.</p>
+    </div>
 
-    <section>
-        <h2>Back-End Development</h2>
-        <p class="color-changing-text">Back-end development deals with server-side scripting and database management. It includes technologies like Node.js, Ruby on Rails, and SQL databases.</p>
-    </section>
+    <!-- Backend Technologies Section -->
+    <div id="section5" class="card">
+      <h2>Backend Technologies</h2>
+      <p>Backend technologies handle server-side logic, databases, and application functionality. Explore the world of backend development with languages like Node.js, Python, and Ruby, and learn about databases and server deployment.</p>
+      <!-- Additional Features -->
+      <h3>Features:</h3>
+      <ul>
+        <li>Server-side programming for application logic</li>
+        <li>Database management for storing and retrieving data</li>
+        <li>Scalability and performance optimization strategies</li>
+      </ul>
+      <!-- How to Learn -->
+      <h3>How to Learn:</h3>
+      <ul>
+        <li>Complete tutorials on backend languages (Node.js, Python, Ruby)</li>
+        <li>Build RESTful APIs and connect to databases</li>
+        <li>Learn about server deployment and cloud services</li>
+        <li>Explore scalability and performance optimization techniques</li>
+      </ul>
+      <button onclick="toggleSummary('backendSummary')">Toggle Summary</button>
+      <p id="backendSummary" style="display: none;">Dive into backend development to handle server-side logic, manage databases, and optimize application performance. Learn languages like Node.js, Python, or Ruby for powerful backend solutions.</p>
+    </div>
 
-    <section>
-        <h2>Full-Stack Development</h2>
-        <p class="color-changing-text">Full-stack developers are proficient in both front-end and back-end development. They can build entire web applications from start to finish.</p>
-    </section>
+    <!-- Add more sections as needed -->
 
-    <section>
-        <h2>Web Development Tools</h2>
-        <p class="color-changing-text">There are various tools and frameworks available to aid web developers, such as:</p>
-        <ul>
-            <li>Text editors like Visual Studio Code</li>
-            <li>Version control systems like Git</li>
-            <li>Front-end libraries like React and Vue.js</li>
-            <li>Server-side frameworks like Django and Express.js</li>
-        </ul>
-    </section>
+  </div>
 
-    <!-- Add more sections and content as needed -->
+  <script>
+    function toggleSummary(summaryId) {
+      var summary = document.getElementById(summaryId);
+      summary.style.display = summary.style.display === 'none' ? 'block' : 'none';
+    }
 
-    <footer class="#footer">
-        <p>&copy; 2023 Abhinav Prakash</p>
-        <u><p>Designed and Build by Abhinav Prakash</p></u>
-    </footer>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
 </body>
+
 </html>

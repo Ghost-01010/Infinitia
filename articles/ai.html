@@ -1,75 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dot Background</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            background-color: #7289da; /* Discord's background color */
-        }
-
-        .dot-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .dot {
-            position: absolute;
-            background: #ffffff; /* Dot color */
-            width: 5px;
-            height: 5px;
-            border-radius: 50%;
-            animation: move 3s linear infinite;
-        }
-
-        .content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding-top: 50px;
-            color: #ffffff;
-        }
-
-    @keyframes move {
-        0% {
-            transform: translate(0, 0);
-        }
-        100% {
-            transform: translate(50px, 50px);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Hub</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
     }
-    </style>
+
+    header {
+      background-color: #333;
+      padding: 15px;
+      text-align: center;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+      padding: 10px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      opacity: 0;
+      animation: fadeIn 1s ease-out;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card {
+      margin: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      background-color: #333;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1, h2, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    #section1 {
+      background-color: #555;
+    }
+
+    #section2 {
+      background-color: #444;
+    }
+
+    #section3 {
+      background-color: #333;
+    }
+
+    #section4 {
+      background-color: #666;
+    }
+
+    #section5 {
+      background-color: #777;
+    }
+
+    /* Scroll Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+
+  <!-- 16x16 pixel favicon -->
+<link rel="icon" href="/Icon.png" sizes="16x16" type="Icon/png">
+
+<!-- 32x32 pixel favicon -->
+<link rel="icon" href="/Icon.png" sizes="32x32" type="Icon/png">
 </head>
+
 <body>
-    <div class="dot-container">
-        <script>
-            const dotContainer = document.querySelector(".dot-container");
+  <header>
+    <h1>AI Hub</h1>
+  </header>
 
-            function createDots() {
-                for (let i = 0; i < 100; i++) {
-                    const dot = document.createElement("div");
-                    dot.className = "dot";
-                    dot.style.top = `${Math.random() * 100}%`;
-                    dot.style.left = `${Math.random() * 100}%`;
-                    dot.style.animationDuration = `${2 + Math.random() * 3}s`; // Vary animation duration
-                    dotContainer.appendChild(dot);
-                }
-            }
+  <nav>
+    <a href="#section1">Introduction to AI</a>
+    <a href="#section2">Machine Learning</a>
+    <a href="#section3">Natural Language Processing</a>
+    <a href="#section4">AI Ethics</a>
+    <a href="#section5">AI in Healthcare</a>
+    <!-- Add more navigation links for additional sections -->
+  </nav>
 
-            createDots();
-        </script>
+  <div id="container">
+    <div id="section1" class="card">
+      <h2>Introduction to AI</h2>
+      <p>Artificial Intelligence (AI) is a branch of computer science that focuses on creating intelligent machines capable of performing tasks that typically require human intelligence. Explore the fundamental concepts and applications of AI. Estimated reading time: 15 minutes.</p>
+      <p>This section covers:</p>
+      <ul>
+        <li>Definition and History of AI</li>
+        <li>Types of AI: Narrow AI vs. General AI</li>
+        <li>Applications of AI in various fields</li>
+        <li>Ethical considerations in AI development</li>
+        <li>The future of AI and its impact</li>
+      </ul>
+      <p>How to Learn:</p>
+      <ul>
+        <li>Online courses on AI fundamentals</li>
+        <li>Hands-on projects and coding exercises</li>
+        <li>Stay updated with AI research and advancements</li>
+        <li>Engage in AI communities and discussions</li>
+      </ul>
+      <p>Benefits:</p>
+      <ul>
+        <li>Exciting opportunities in AI research and development</li>
+        <li>Addressing real-world challenges with intelligent solutions</li>
+        <li>Understanding the ethical implications of AI</li>
+        <li>Contributing to the advancement of technology</li>
+      </ul>
+      <button onclick="toggleSummary('summary1')">Toggle Summary</button>
+      <p id="summary1" style="display: none;">Gain a comprehensive understanding of AI, from its foundational concepts to its ethical considerations. Dive into the world of intelligent machines and their impact on society.</p>
     </div>
-    <div class="content">
-        <!-- Your authentication login page content goes here -->
-        <h1>Welcome to My Site</h1>
-        <p>Log in with your credentials.</p>
-        <!-- Add your login form here -->
+
+    <div id="section2" class="card">
+      <h2>Machine Learning</h2>
+      <p>Machine Learning is a subset of AI that focuses on developing algorithms that enable computers to learn from data and improve their performance over time. Delve into the principles and applications of machine learning. Estimated reading time: 30 minutes.</p>
+      <p>This section covers:</p>
+      <ul>
+        <li>Supervised Learning, Unsupervised Learning, and Reinforcement Learning</li>
+        <li>Common machine learning algorithms</li>
+        <li>Data preprocessing and feature engineering</li>
+        <li>Practical applications of machine learning</li>
+        <li>Challenges and future trends in machine learning</li>
+      </ul>
+      <p>How to Learn:</p>
+      <ul>
+        <li>Enroll in machine learning courses and certifications</li>
+        <li>Work on machine learning projects and Kaggle competitions</li>
+        <li>Read research papers and stay updated with ML advancements</li>
+        <li>Collaborate with other machine learning enthusiasts</li>
+      </ul>
+      <p>Benefits:</p>
+      <ul>
+        <li>Developing intelligent systems capable of making predictions</li>
+        <li>Understanding the practical applications of machine learning</li>
+        <li>Contributing to advancements in data-driven decision-making</li>
+        <li>Exploring opportunities in AI and ML research</li>
+      </ul>
+      <button onclick="toggleSummary('summary2')">Toggle Summary</button>
+      <p id="summary2" style="display: none;">Machine Learning empowers computers to learn from data and make predictions or decisions. Explore the world of algorithms, data, and intelligent systems in this comprehensive section.</p>
     </div>
+
+    <div id="section3" class="card">
+      <h2>Natural Language Processing</h2>
+      <p>Natural Language Processing (NLP) is a field of AI that focuses on the interaction between computers and human language. Learn about the challenges and applications of NLP, from chatbots to language translation. Estimated reading time: 15 minutes.</p>
+      <p>This section covers:</p>
+      <ul>
+        <li>Understanding human language and context</li>
+        <li>Text processing and sentiment analysis</li>
+        <li>Building chatbots and virtual assistants</li>
+        <li>Language translation and generation</li>
+        <li>Challenges in NLP and current research trends</li>
+      </ul>
+      <p>How to Learn:</p>
+      <ul>
+        <li>Explore NLP courses and tutorials</li>
+        <li>Build NLP applications and projects</li>
+        <li>Stay updated with NLP research papers and conferences</li>
+        <li>Contribute to open-source NLP projects</li>
+      </ul>
+      <p>Benefits:</p>
+      <ul>
+        <li>Creating intelligent systems capable of understanding and generating human language</li>
+        <li>Enhancing user experience through language-based interactions</li>
+        <li>Contributing to advancements in chatbots and virtual assistants</li>
+        <li>Addressing ethical considerations in NLP applications</li>
+      </ul>
+      <button onclick="toggleSummary('summary3')">Toggle Summary</button>
+      <p id="summary3" style="display: none;">Natural Language Processing is at the forefront of human-computer interaction. Explore the fascinating world of language understanding, processing, and the development of language-driven applications.</p>
+    </div>
+
+    <div id="section4" class="card">
+      <h2>AI Ethics</h2>
+      <p>AI Ethics explores the moral and societal implications of artificial intelligence. Delve into the ethical considerations and responsible development practices in AI. Understand the challenges and importance of building AI systems that align with human values. Estimated reading time: 20 minutes.</p>
+      <p>This section covers:</p>
+      <ul>
+        <li>Ethical considerations in AI development</li>
+        <li>Fairness, accountability, and transparency in AI algorithms</li>
+        <li>Data privacy and security in AI applications</li>
+        <li>Social impact and biases in AI systems</li>
+        <li>International guidelines and standards in AI ethics</li>
+      </ul>
+      <p>How to Learn:</p>
+      <ul>
+        <li>Engage in discussions on AI ethics forums and communities</li>
+        <li>Stay informed about AI regulations and guidelines</li>
+        <li>Participate in workshops on responsible AI development</li>
+        <li>Consider the societal impact of AI applications</li>
+      </ul>
+      <p>Benefits:</p>
+      <ul>
+        <li>Contributing to the development of ethically sound AI systems</li>
+        <li>Raising awareness about the societal impact of AI</li>
+        <li>Ensuring fairness and transparency in AI decision-making</li>
+        <li>Adhering to ethical standards for responsible AI development</li>
+      </ul>
+      <button onclick="toggleSummary('summary4')">Toggle Summary</button>
+      <p id="summary4" style="display: none;">AI Ethics is essential for the responsible development and deployment of artificial intelligence. Explore the ethical considerations and best practices to ensure the positive impact of AI on society.</p>
+    </div>
+
+    <div id="section5" class="card">
+      <h2>AI in Healthcare</h2>
+      <p>AI in Healthcare leverages artificial intelligence to revolutionize the healthcare industry. Explore how AI is used for medical diagnosis, personalized treatment plans, and improving patient outcomes. Understand the challenges and benefits of integrating AI into healthcare practices. Estimated reading time: 25 minutes.</p>
+      <p>This section covers:</p>
+      <ul>
+        <li>Medical imaging and diagnostic AI applications</li>
+        <li>Personalized medicine and treatment recommendations</li>
+        <li>AI-driven drug discovery and development</li>
+        <li>Remote patient monitoring and predictive analytics</li>
+        <li>Ethical considerations in AI-powered healthcare</li>
+      </ul>
+      <p>How to Learn:</p>
+      <ul>
+        <li>Explore online courses on AI applications in healthcare</li>
+        <li>Stay updated with advancements in medical AI research</li>
+        <li>Collaborate with healthcare professionals on AI projects</li>
+        <li>Understand regulatory frameworks for AI in healthcare</li>
+      </ul>
+      <p>Benefits:</p>
+      <ul>
+        <li>Improving diagnostic accuracy and treatment efficiency</li>
+        <li>Enhancing patient care through personalized medicine</li>
+        <li>Accelerating drug discovery and development processes</li>
+        <li>Addressing healthcare challenges with innovative AI solutions</li>
+      </ul>
+      <button onclick="toggleSummary('summary5')">Toggle Summary</button>
+      <p id="summary5" style="display: none;">AI in Healthcare is transforming the medical landscape. Discover the applications, challenges, and ethical considerations associated with integrating artificial intelligence into healthcare practices.</p>
+    </div>
+
+    <!-- Add more sections as needed -->
+
+  </div>
+
+  <script>
+    function toggleSummary(summaryId) {
+      var summary = document.getElementById(summaryId);
+      summary.style.display = summary.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
+
 </html>

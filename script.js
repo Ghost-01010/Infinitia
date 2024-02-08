@@ -154,3 +154,31 @@ document.querySelector(".loader-wrapper").classList.remove("loader-hidden");
 
 // Hide the loader (remove the class)
 document.querySelector(".loader-wrapper").classList.add("loader-hidden");
+
+document.addEventListener("DOMContentLoaded", function () {
+    var header = document.querySelector("header");
+    var nav = document.querySelector("nav");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 100) {
+            header.classList.add("sticky");
+            nav.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+            nav.classList.remove("sticky");
+        }
+    });
+
+    // Centering navigation links vertically
+    var navLinksContainer = document.querySelector(".nav-links");
+    var windowHeight = window.innerHeight;
+
+    function centerNavLinks() {
+        var headerHeight = header.offsetHeight;
+        var offset = (windowHeight - headerHeight) / 2;
+        navLinksContainer.style.top = offset + "px";
+    }
+
+    window.addEventListener("resize", centerNavLinks);
+    centerNavLinks(); // Call it initially
+});
