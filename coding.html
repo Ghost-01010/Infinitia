@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic Coding | Infinitia</title>
+  <style>
+    /* Updated styles for a futuristic look */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212; /* Dark background for a futuristic feel */
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px;
+      text-align: center;
+      color: #fff;
+      border-bottom: 2px solid #555; /* Adding a border for a modern touch */
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.1); /* Glassy effect with white color */
+      padding: 10px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    .card {
+      margin: 20px;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 10px;
+      background-color: #333;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-out;
+      position: relative;
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* New styling for the coding topic */
+    .card[id^="section"] {
+      background-color: #888;
+      border: 1px solid #555; /* Border for a futuristic touch */
+    }
+
+    /* Special container for code display */
+    .code-container {
+      max-width: 100%;
+      background-color: #1e1e1e;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin-bottom: 15px;
+    }
+
+    .code-output {
+      background-color: #232323;
+      color: #00ff00;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    /* Updated styles for the toggle button */
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    /* New styling for glass effect */
+    .glass {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* New section with glass effect */
+    .card.glass {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+      margin-top: 30px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    p[id$="Summary"] {
+      transition: max-height 0.5s ease-out; /* Adding a smooth transition for summary */
+      overflow: hidden;
+      max-height: 0;
+    }
+
+    /* Scrollbar styles */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #555;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: #333;
+    }
+  </style>
+
+  <!-- 16x16 pixel favicon -->
+<link rel="icon" href="Icon.png" sizes="16x16" type="Icon/png">
+
+<!-- 32x32 pixel favicon -->
+<link rel="icon" href="Icon.png" sizes="32x32" type="Icon/png">
+</head>
+
+<body>
+  <header>
+    <h1>Futuristic Coding Hub</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="glass">
+    <a href="#section1">HTML</a>
+    <a href="#section2">CSS</a>
+    <a href="#section3">JavaScript</a>
+    <a href="#section4">Frontend Frameworks</a>
+    <a href="#section5">Backend Technologies</a>
+    <a href="#section6">Comparison</a>
+    <a href="#section7">How to Learn</a>
+    <a href="#section8">Benefits</a>
+    <a href="#section9">Uses</a>
+    <a href="#section10">Python</a>
+    <a href="#section11">JavaScript</a>
+    <a href="#section12">HTML</a>
+    <a href="#section13">CSS</a>
+    <a href="#section14">Ruby</a>
+    <a href="#section15">Swift</a>
+    <!-- Add more navigation links for additional sections -->
+  </nav>
+
+  <div id="container">
+
+    <!-- HTML Section -->
+    <div id="section1" class="card glass">
+      <h2>HTML</h2>
+      <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. It structures content using a system of elements and attributes.</p>
+      <p>HTML elements consist of tags that define the structure of a web page. For example, the <code>&lt;head&gt;</code> tag contains metadata, and the <code>&lt;body&gt;</code> tag contains the main content.</p>
+      <p>Common HTML elements include headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>), paragraphs (<code>&lt;p&gt;</code>), lists (<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>), and links (<code>&lt;a&gt;</code>).</p>
+      <p>HTML5, the latest version of HTML, introduced new semantic elements like <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;nav&gt;</code> to enhance the document's structure.</p>
+      <!-- Add more HTML content as needed -->
+    </div>
+
+    <!-- CSS Section -->
+    <div id="section2" class="card glass">
+      <h2>CSS</h2>
+      <p>CSS (Cascading Style Sheets) is used for styling web pages. It controls the presentation and layout of HTML elements, enhancing the visual appeal of a website.</p>
+      <p>With CSS, you can apply styles such as colors, fonts, spacing, and positioning to HTML elements. Selectors target specific elements, and properties define the visual aspects.</p>
+      <p>CSS offers features like box model (margin, padding, border), flexbox, and grid for layout design. Media queries allow creating responsive designs for different devices.</p>
+      <p>Preprocessors like Sass and Less extend CSS capabilities, offering variables, nesting, and functions for more maintainable stylesheets.</p>
+      <!-- Add more CSS content as needed -->
+    </div>
+
+    <!-- JavaScript Section -->
+    <div id="section3" class="card glass">
+      <h2>JavaScript</h2>
+      <p>JavaScript is a versatile scripting language used for creating dynamic and interactive web pages. It runs in the browser and enables client-side functionality.</p>
+      <!-- Add more JavaScript content as needed -->
+    </div>
+
+    <!-- Frontend Frameworks Section -->
+    <div id="section4" class="card glass">
+      <h2>Frontend Frameworks</h2>
+      <p>Frontend frameworks like React, Angular, and Vue.js provide structured approaches to building interactive and responsive user interfaces.</p>
+      <!-- Add more content about specific frameworks as needed -->
+    </div>
+
+    <!-- Backend Technologies Section -->
+    <div id="section5" class="card glass">
+      <h2>Backend Technologies</h2>
+      <p>Backend technologies, including server-side languages like Node.js and frameworks like Django or Flask, handle the server-side logic and database interactions of web applications.</p>
+      <!-- Add more content about specific backend technologies as needed -->
+    </div>
+
+    <!-- Comparison Section -->
+    <div id="section6" class="card glass">
+      <h2>Comparison</h2>
+      <p>Comparing different technologies helps in making informed decisions. Consider factors like performance, scalability, and ease of development when choosing between them.</p>
+      <!-- Add content comparing various technologies as needed -->
+    </div>
+
+    <!-- How to Learn Section -->
+    <div id="section7" class="card glass">
+      <h2>How to Learn</h2>
+      <p>Learning to code involves practice, resources, and a structured approach. Online courses, coding bootcamps, and self-paced learning are common methods.</p>
+      <!-- Add more content about learning strategies as needed -->
+    </div>
+
+    <!-- Benefits Section -->
+    <div id="section8" class="card glass">
+      <h2>Benefits</h2>
+      <p>Coding offers numerous benefits, including problem-solving skills, career opportunities, and the ability to bring ideas to life through software development.</p>
+      <!-- Add more content about the benefits of coding as needed -->
+    </div>
+
+    <!-- Uses Section -->
+    <div id="section9" class="card glass">
+      <h2>Uses</h2>
+      <p>Coding is used in various fields such as web development, data science, artificial intelligence, and more. Understanding its applications helps in choosing a coding path.</p>
+      <!-- Add more content about the uses of coding as needed -->
+    </div>
+
+    <!-- Python Section -->
+    <div id="section10" class="card glass">
+      <h2>Python</h2>
+      <p>Python is a versatile and easy-to-learn programming language. It is widely used for web development, data analysis, machine learning, and automation.</p>
+      <!-- Add more content about Python as needed -->
+    </div>
+
+    <!-- JavaScript Section -->
+    <div id="section11" class="card glass">
+      <h2>JavaScript</h2>
+      <p>JavaScript is a scripting language that adds interactivity to web pages. It is essential for frontend development and increasingly used on the server side.</p>
+      <!-- Add more content about JavaScript as needed -->
+    </div>
+
+    <!-- HTML Section -->
+    <div id="section12" class="card glass">
+      <h2>HTML</h2>
+      <p>HTML forms the backbone of web content. It defines the structure and layout of web pages, providing a foundation for building interactive user interfaces.</p>
+      <!-- Add more content about HTML as needed -->
+    </div>
+
+    <!-- CSS Section -->
+    <div id="section13" class="card glass">
+      <h2>CSS</h2>
+      <p>CSS enhances the visual appeal of web pages. It allows developers to style and format HTML elements, creating aesthetically pleasing and responsive designs.</p>
+      <!-- Add more content about CSS as needed -->
+    </div>
+
+    <!-- Ruby Section -->
+    <div id="section14" class="card glass">
+      <h2>Ruby</h2>
+      <p>Ruby is a dynamic, object-oriented programming language known for its simplicity and productivity. It is often used for web development and offers:</p>
+      <ul>
+        <li>Clear and concise syntax</li>
+        <li>Object-oriented programming features</li>
+        <li>Web development with Ruby on Rails framework</li>
+      </ul>
+      <!-- Code Example -->
+      <h3>Code Example:</h3>
+      <div class="code-container">
+        <pre>
+            <code class="ruby">
+  # Hello World program in Ruby
+  puts "Hello, World!"
+            </code>
+          </pre>
+      </div>
+      <!-- Output -->
+      <h3>Output:</h3>
+      <div class="code-output">$ Hello, World!</div>
+      <!-- Benefits -->
+      <h3>Benefits:</h3>
+      <ul>
+        <li>Elegant and readable code</li>
+        <li>Strong focus on developer happiness</li>
+        <li>Rails framework for rapid web development</li>
+      </ul>
+      <button onclick="toggleSummary('rubySummary')">Toggle Summary</button>
+      <p id="rubySummary" style="display: none;">Ruby's simplicity and expressiveness make it a favorite among developers. Its clean syntax and the Ruby on Rails framework contribute to efficient web development and maintainability.</p>
+    </div>
+
+    <!-- Swift Section -->
+    <div id="section15" class="card glass">
+      <h2>Swift</h2>
+      <p>Swift is a powerful and intuitive programming language developed by Apple. It is commonly used for iOS, macOS, watchOS, and tvOS app development and offers:</p>
+      <ul>
+        <li>Fast and safe language with modern features</li>
+        <li>Designed for seamless integration with Apple platforms</li>
+        <li>Syntax that is easy to read and write</li>
+      </ul>
+      <!-- Code Example -->
+      <h3>Code Example:</h3>
+      <div class="code-container">
+        <pre>
+            <code class="swift">
+  // Hello World program in Swift
+  print("Hello, World!")
+            </code>
+          </pre>
+      </div>
+      <!-- Output -->
+      <h3>Output:</h3>
+      <div class="code-output">$ Hello, World!</div>
+      <!-- Benefits -->
+      <h3>Benefits:</h3>
+      <ul>
+        <li>High-performance language for Apple ecosystems</li>
+        <li>Focus on safety and prevention of errors</li>
+        <li>Support for modern programming patterns</li>
+      </ul>
+      <button onclick="toggleSummary('swiftSummary')">Toggle Summary</button>
+      <p id="swiftSummary" style="display: none;">Swift's design philosophy emphasizes safety, performance, and expressiveness. It has become the go-to language for developing applications across Apple's diverse range of devices.</p>
+    </div>
+
+    <!-- Additional Sections can be added as needed -->
+
+  </div>
+
+  <script>
+    // Same JavaScript as the original webpage
+    function toggleSummary(summaryId) {
+      var summary = document.getElementById(summaryId);
+      summary.style.maxHeight = summary.style.maxHeight === '0px' ? summary.scrollHeight + 'px' : '0px';
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    function toggleNav() {
+      var nav = document.querySelector('nav');
+      nav.style.height = nav.style.height === '0px' ? 'auto' : '0px';
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>

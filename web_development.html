@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development | Infinitia</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background-color: #333;
+      padding: 15px;
+      text-align: center;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+      padding: 10px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      opacity: 0;
+      animation: fadeIn 1s ease-out;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card {
+      margin: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      background-color: #333;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1, h2, p {
+      margin: 0;
+      padding: 0;
+    }
+
+    #section1 {
+      background-color: #555;
+    }
+
+    #section2 {
+      background-color: #444;
+    }
+
+    #section3 {
+      background-color: #333;
+    }
+
+    #section4 {
+      background-color: #666;
+    }
+
+    #section5 {
+      background-color: #777;
+    }
+
+    /* Scroll Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+
+  <!-- 16x16 pixel favicon -->
+<link rel="icon" href="Icon.png" sizes="16x16" type="Icon/png">
+
+<!-- 32x32 pixel favicon -->
+<link rel="icon" href="Icon.png" sizes="32x32" type="Icon/png">
+</head>
+
+<body>
+    <header>
+        <h1>Web Development Hub</h1>
+      </header>
+    
+      <!-- Navigation Bar -->
+      <nav>
+        <a href="#section1">HTML</a>
+        <a href="#section2">CSS</a>
+        <a href="#section3">JavaScript</a>
+        <a href="#section4">Frontend Frameworks</a>
+        <a href="#section5">Backend Technologies</a>
+        <!-- Add more navigation links for additional sections -->
+      </nav>
+     
+  <div id="container">
+    <!-- HTML Section -->
+    <div id="section1" class="card">
+      <h2>HTML</h2>
+      <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. Learn the basic structure and elements of HTML to create the foundation of your web development knowledge.</p>
+      <!-- Additional Features -->
+      <h3>Features:</h3>
+      <ul>
+        <li>Simple and intuitive markup language</li>
+        <li>Wide browser support</li>
+        <li>Essential for building the structure of web pages</li>
+      </ul>
+      <!-- How to Learn -->
+      <h3>How to Learn:</h3>
+      <ul>
+        <li>Online courses and tutorials on HTML basics</li>
+        <li>Hands-on practice by creating simple web pages</li>
+        <li>Explore HTML documentation and references</li>
+        <li>Participate in coding exercises and projects</li>
+      </ul>
+      <button onclick="toggleSummary('htmlSummary')">Toggle Summary</button>
+      <p id="htmlSummary" style="display: none;">Master the essentials of HTML to build the structure of your web pages. Create well-formed documents with text, images, links, and interactive forms.</p>
+    </div>
+
+    <!-- CSS Section -->
+    <div id="section2" class="card">
+      <h2>CSS</h2>
+      <p>CSS (Cascading Style Sheets) is a stylesheet language used for describing the presentation of a document written in HTML. Explore the styling capabilities of CSS to enhance the visual appeal of your web pages.</p>
+      <!-- Additional Features -->
+      <h3>Features:</h3>
+      <ul>
+        <li>Powerful styling language for web documents</li>
+        <li>Separation of content and presentation</li>
+        <li>Responsive design for various screen sizes</li>
+      </ul>
+      <!-- How to Learn -->
+      <h3>How to Learn:</h3>
+      <ul>
+        <li>Online courses and tutorials on CSS styling</li>
+        <li>Practice by styling HTML elements and layouts</li>
+        <li>Explore CSS frameworks for efficient styling</li>
+        <li>Learn about responsive design principles</li>
+      </ul>
+      <button onclick="toggleSummary('cssSummary')">Toggle Summary</button>
+      <p id="cssSummary" style="display: none;">Transform the look and feel of your web pages with CSS. Learn to style elements, create layouts, and implement responsive design for a seamless user experience.</p>
+    </div>
+
+    <!-- JavaScript Section -->
+    <div id="section3" class="card">
+      <h2>JavaScript</h2>
+      <p>JavaScript is a high-level programming language that enables interactive web pages. Dive into the world of JavaScript to add dynamic behavior and functionality to your web projects.</p>
+      <!-- Additional Features -->
+      <h3>Features:</h3>
+      <ul>
+        <li>Client-side scripting language for web development</li>
+        <li>Allows for dynamic content and interactivity</li>
+        <li>Extensive ecosystem with frameworks and libraries</li>
+      </ul>
+      <!-- How to Learn -->
+      <h3>How to Learn:</h3>
+      <ul>
+        <li>Online courses on JavaScript fundamentals</li>
+        <li>Hands-on coding by building interactive web elements</li>
+        <li>Explore popular JavaScript frameworks (e.g., React, Vue)</li>
+        <li>Practice asynchronous programming and DOM manipulation</li>
+      </ul>
+      <button onclick="toggleSummary('jsSummary')">Toggle Summary</button>
+      <p id="jsSummary" style="display: none;">Empower your web pages with JavaScript. Learn to manipulate the DOM, handle events, and interact with servers to create dynamic and responsive web applications.</p>
+    </div>
+
+    <!-- Frontend Frameworks Section -->
+    <div id="section4" class="card">
+      <h2>Frontend Frameworks</h2>
+      <p>Frontend frameworks like React, Vue, and Angular provide powerful tools for building modern web applications. Explore the features and advantages of popular frontend frameworks.</p>
+      <!-- Additional Features -->
+      <h3>Features:</h3>
+      <ul>
+        <li>Component-based architecture for modular development</li>
+        <li>Efficient state management for complex applications</li>
+        <li>Enhanced developer tools and community support</li>
+      </ul>
+      <!-- How to Learn -->
+      <h3>How to Learn:</h3>
+      <ul>
+        <li>Complete tutorials on React, Vue, or Angular basics</li>
+        <li>Build projects to practice component-based development</li>
+        <li>Explore state management techniques in large applications</li>
+        <li>Engage with the community and contribute to open-source projects</li>
+      </ul>
+      <button onclick="toggleSummary('frontendSummary')">Toggle Summary</button>
+      <p id="frontendSummary" style="display: none;">Take your web development skills to the next level with frontend frameworks. Build interactive and efficient web applications using React, Vue, or Angular.</p>
+    </div>
+
+    <!-- Backend Technologies Section -->
+    <div id="section5" class="card">
+      <h2>Backend Technologies</h2>
+      <p>Backend technologies handle server-side logic, databases, and application functionality. Explore the world of backend development with languages like Node.js, Python, and Ruby, and learn about databases and server deployment.</p>
+      <!-- Additional Features -->
+      <h3>Features:</h3>
+      <ul>
+        <li>Server-side programming for application logic</li>
+        <li>Database management for storing and retrieving data</li>
+        <li>Scalability and performance optimization strategies</li>
+      </ul>
+      <!-- How to Learn -->
+      <h3>How to Learn:</h3>
+      <ul>
+        <li>Complete tutorials on backend languages (Node.js, Python, Ruby)</li>
+        <li>Build RESTful APIs and connect to databases</li>
+        <li>Learn about server deployment and cloud services</li>
+        <li>Explore scalability and performance optimization techniques</li>
+      </ul>
+      <button onclick="toggleSummary('backendSummary')">Toggle Summary</button>
+      <p id="backendSummary" style="display: none;">Dive into backend development to handle server-side logic, manage databases, and optimize application performance. Learn languages like Node.js, Python, or Ruby for powerful backend solutions.</p>
+    </div>
+
+    <!-- Add more sections as needed -->
+
+  </div>
+
+  <script>
+    function toggleSummary(summaryId) {
+      var summary = document.getElementById(summaryId);
+      summary.style.display = summary.style.display === 'none' ? 'block' : 'none';
+    }
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+</body>
+
+</html>
