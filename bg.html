@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rain Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      height: 100vh;
+      background-color: rgb(17, 17, 17); /* Black background color */
+    }
+
+    .dot {
+      position: absolute;
+      width: 0.8mm;
+      height: 0.8mm;
+      border-radius: 50%;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.8) 100%);
+      animation: fallDot linear infinite;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    }
+
+    @keyframes shine {
+  to {
+    opacity: 1;
+  }
+}
+
+    @keyframes fallDot {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Dynamically create and append dots to the body
+    const numDots = 200;
+
+    for (let i = 0; i < numDots; i++) {
+      createDot(i);
+    }
+
+    function createDot(index) {
+      const dot = document.createElement('div');
+      dot.className = 'dot';
+      dot.style.left = `${Math.random() * window.innerWidth}px`;
+      dot.style.animationDuration = `${Math.random() * 4 + 1}s`;
+      dot.style.animationDelay = `-${Math.random() * 4}s`;
+      dot.style.opacity = `${Math.random()}`;
+      dot.style.filter = `blur(${Math.random() * 2}px)`;
+      document.body.appendChild(dot);
+    }
+  </script>
+</body>
+</html>

@@ -91,16 +91,24 @@
             color: #18dfce;
         }
 
-        #section1, #section2, #section3, #section4 {
+        #section1, #section2, #section3, #section4, #section5, #section6 {
             text-align: center;
             color: #fff;
         }
 
         @media only screen and (max-width: 600px) {
-            .card {
-                max-width: 90%;
-            }
-        }
+    .card {
+        max-width: 90%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+} 
     </style>
 
     <!-- 16x16 pixel favicon -->
@@ -115,7 +123,8 @@
         <a href="#section2" style="color: #18dfce;">Memory Test</a>
         <a href="#section3" style="color: #18dfce;">Stone Paper Scissor</a>
         <a href="#section4" style="color: #18dfce;">Tic Tac Toe</a>
-
+        <a href="#section5" style="color: #18dfce;">Where is Waldo?</a>
+        <a href="#section4" style="color: #18dfce; flex-shrink: 0;">Chrome Dino</a>
     </nav>
 
     <div id="container">
@@ -132,22 +141,37 @@
             <p>This game is just for that purpose</p>
             <p>Get to know it</p>
             <p><a href="card_memory_flip.html" style="color: #18dfce;">Memory Test by Card Flip</a></p>
-            </div>
+        </div>
 
-            <div id="section3" class="card glass">
-                <p>Have you ever played the game stone, paper, scissor, with your friends in your childhood?</p>
-                <p>I Have played with my friends</p>
-                <p>Now you can play with AI or computer</p>
-                <p><a href="stone_paper_scissor.html" style="color: #18dfce;">Stone Paper Scissor</a></p>
-                </div>
+        <div id="section3" class="card glass">
+            <p>Have you ever played the game stone, paper, scissor, with your friends in your childhood?</p>
+            <p>I Have played with my friends</p>
+            <p>Now you can play with AI or computer</p>
+            <p><a href="stone_paper_scissor.html" style="color: #18dfce;">Stone Paper Scissor</a></p>
+        </div>
 
-                <div id="section4" class="card glass">
-                    <p>I know that you have also played Tic Tac Toe in copy to do some time pass</p>
-                    <p>All have done that!!</p>
-                    <p>Get one more chance</p>
-                    <p><a href="tic_tac_toe.html" style="color: #18dfce;">Tic Tac Toe</a></p>
-                    </div>
+        <div id="section4" class="card glass">
+            <p>I know that you have also played Tic Tac Toe in copy to do some time pass</p>
+            <p>All have done that!!</p>
+            <p>Get one more chance</p>
+            <p><a href="tic_tac_toe.html" style="color: #18dfce;">Tic Tac Toe</a></p>
+        </div>
 
+        <div id="section5" class="card glass">
+            <p>Is your eyesight strong enough?</p>
+            <p>There is a game in which you have tp find waldo that is wriiten with the help of magnifying glass</p>
+            <p>Find it here</p>
+            <p><a href="where_is_waldo.html" style="color: #18dfce;">Where is Waldo</a></p>
+        </div>
+
+        <div id="section6" class="card glass">
+            <p>Sometimes when we search anything and we don't have data the chrome just opens the dino game.</p>
+            <p>And then we keep playing it and that's another level of fun.</p>
+            <p>Want that fun again?</p>
+            <p>Play it here !</p>
+            <p><a href="dino.html" style="color: #18dfce;">Chrome Dino</a></p>
+        </div>
+    
         </div>
     </div>
 

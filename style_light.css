@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.705);
+    background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,12 +17,12 @@
 }
 
 #loading-container:hover {
-    background-color: rgba(0, 0, 0, 0.9); /* Darker background color on hover */
+    background-color: rgba(255, 255, 255, 0.9); /* Darker background color on hover */
 }
 
 .loading-text {
     font-size: 36px;
-    color: rgb(255, 255, 255);
+    color: #000; /* Dark text color */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,7 +66,7 @@
 }
 
 .loading-spinner {
-    animation: loadingAnimation 3s linear infinite; /* Set the duration to 3 seconds */
+    animation: loadingAnimation 5s linear infinite; /* Set the duration to 3 seconds */
 }
 
 /* Delayed hiding */
@@ -96,11 +96,10 @@ html, body, h1, h2, h3, p {
 
 body {
     font-family: 'Special Elite', cursive;
-    background-color: rgb(43, 40, 40);
+    background-color: #f0f0f0; /* Light background color for the body */
     color: #333;
     line-height: 1.6;
     text-align: center;
-    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar{
@@ -118,8 +117,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    overflow: hidden;
-    background-color: #aa00d4;
+    background-color: #0078d4; /* Lighter header background color */
     z-index: 100;
     transition: background-color 0.5s ease-in-out; /* Smooth background color change on scroll */
     display: flex; /* Add this line */
@@ -143,7 +141,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #054e53;
+    background-color: #54a4b4; /* Lighter navigation background color */
     z-index: 100;
     transition: background-color 0.8s ease-in-out;
     display: flex;
@@ -164,12 +162,6 @@ nav.sticky {
     transition: transform 0.3s ease, color 0.3s ease; /* Transition both transform and color */
     text-decoration: none; /* Remove underline */
     align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
 }
 
 .nav-link:hover {
@@ -196,14 +188,17 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #333;
     font-weight: bold;
     font-size: 20px; /* Adjust the font size as needed */
     padding: 10px 12px; /* Add padding as needed */
 }
 
-.nav-links li {
-    margin: 0 15px;
+/* Define a 3D hover effect for navigation links */
+.nav-link {
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition both transform and color */
+    text-decoration: none; /* Remove underline */
 }
 
 .nav-link::before {
@@ -222,8 +217,7 @@ nav a {
 
 .nav-link:hover {
     transform: translateY(-5px) scale(1.05); /* Lift the link and scale on hover */
-    color: #007bff; /* Change text color on hover */
-    text-decoration: underline;
+    color: #0078d4; /* Darker text color on hover */
 }
 
 .nav-link:hover::before {
@@ -274,7 +268,7 @@ nav a {
     background-size: cover;
     text-align: center;
     padding: 100px 0;
-    color: #fff;
+    color: #000;
 }
 
 .hero h1 {
@@ -323,7 +317,6 @@ nav a {
 }
 
 /* Style for social media icons */
-/* Social media icons */
 .social-icons {
     text-align: center;
 }
@@ -332,17 +325,34 @@ nav a {
     display: inline-block;
     margin: 50px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add transform and opacity transitions */
-}
-
-.social-icon:hover {
-    transform: scale(1.2); /* Increase size on hover */
-    opacity: 0.7; /* Adjust the opacity for the fade-out effect */
 }
 
 .social-icon img {
     width: 25px; /* Adjust the size as needed */
     height: 25px; /* Adjust the size as needed */
+}
+
+/* Blog section styles */
+.blog-post {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.blog-post h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 1rem;
+}
+
+.blog-post:hover {
+    transform: scale(1.03);
 }
 
 /* Contact section styles */
@@ -378,19 +388,6 @@ nav a {
     background-color: #0461a3; /* Darker color on hover */
 }
 
-.hover-card {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
-    z-index: 999;
-}
-
 /* Footer styles */
 footer {
     background-color: #054e53;
@@ -420,80 +417,6 @@ footer {
     color: #005ea2; /* Darker color on hover */
 }
 
-/* Add a media query for mobile view */
-@media only screen and (max-width: 600px) {
-    /* Adjustments for smaller screens */
-
-    /* Loading animation styles */
-    #loading-container {
-        background-color: rgba(0, 0, 0, 0.9); /* Darker background color */
-    }
-
-    /* Header styles */
-    header {
-        padding: 10px 0;
-    }
-
-    /* Navigation styles */
-    nav {
-        height: auto; /* Adjust height to auto */
-        padding: 10px; /* Add padding for better spacing */
-    }
-
-    nav ul {
-        flex-direction: column; /* Stack nav items vertically */
-        text-align: center; /* Center-align items */
-    }
-
-    nav ul li {
-        margin: 10px 0; /* Add margin between nav items */
-    }
-
-    .theme-switch {
-        top: auto;
-        right: 10px; /* Adjust right position */
-        bottom: 10px;
-    }
-
-    /* Hero section styles */
-    .hero {
-        padding: 50px 10px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-        margin-top: 20px;
-    }
-
-    /* Content container styles */
-    .container {
-        padding: 15px;
-    }
-
-    /* Contact section styles */
-    .contact form {
-        padding: 15px;
-    }
-    
-
-    /* Footer styles */
-    footer {
-        padding: 15px 0;
-    }
-
-    .social-icon {
-        margin: 10px;
-    }
-
-    /* Theme Switch button styles */
-    .theme-switch {
-        top: auto;
-        right: 10px;
-        bottom: 10px;
-    }
-}
-
-
 /*Theme Switch button*/
 
 .theme-switch {
@@ -522,6 +445,13 @@ footer {
   top: 15px; /* Adjust the top position as needed */
   right: 20px; /* Adjust the right position as needed */
   z-index: 999;
+    --container-light-bg: #3D7EAE;
+    --container-night-bg: #1D1F2C;
+    --sun-bg: #ECCA2F;
+    --moon-bg: #C4C9D1;
+    --spot-color: #959DB1;
+    --clouds-color: #F3FDFF;
+    --back-clouds-color: #AACADF;
   }
   
   .theme-switch, .theme-switch *, .theme-switch *::before, .theme-switch *::after {
