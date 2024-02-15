@@ -21,25 +21,6 @@
       color: #fff;
     }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      background-color: #222;
-      padding: 10px;
-      animation: fadeIn 1s ease-out;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 20px;
-      margin: 0 10px;
-      opacity: 0;
-      animation: fadeIn 1s ease-out;
-      animation-delay: 0.5s;
-      animation-fill-mode: forwards;
-    }
-
     #container {
       display: flex;
       flex-direction: column;
@@ -58,26 +39,6 @@
     h1, h2, p {
       margin: 0;
       padding: 0;
-    }
-
-    #section1 {
-      background-color: #555;
-    }
-
-    #section2 {
-      background-color: #444;
-    }
-
-    #section3 {
-      background-color: #333;
-    }
-
-    #section4 {
-      background-color: #666;
-    }
-
-    #section5 {
-      background-color: #777;
     }
 
     /* Scroll Animation */
@@ -105,20 +66,10 @@
     <header>
         <h1>Web Development Hub</h1>
       </header>
-    
-      <!-- Navigation Bar -->
-      <nav>
-        <a href="#section1">HTML</a>
-        <a href="#section2">CSS</a>
-        <a href="#section3">JavaScript</a>
-        <a href="#section4">Frontend Frameworks</a>
-        <a href="#section5">Backend Technologies</a>
-        <!-- Add more navigation links for additional sections -->
-      </nav>
      
   <div id="container">
     <!-- HTML Section -->
-    <div id="section1" class="card">
+    <div class="card">
       <h2>HTML</h2>
       <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages. Learn the basic structure and elements of HTML to create the foundation of your web development knowledge.</p>
       <!-- Additional Features -->
@@ -140,8 +91,7 @@
       <p id="htmlSummary" style="display: none;">Master the essentials of HTML to build the structure of your web pages. Create well-formed documents with text, images, links, and interactive forms.</p>
     </div>
 
-    <!-- CSS Section -->
-    <div id="section2" class="card">
+    <div class="card">
       <h2>CSS</h2>
       <p>CSS (Cascading Style Sheets) is a stylesheet language used for describing the presentation of a document written in HTML. Explore the styling capabilities of CSS to enhance the visual appeal of your web pages.</p>
       <!-- Additional Features -->
@@ -164,7 +114,7 @@
     </div>
 
     <!-- JavaScript Section -->
-    <div id="section3" class="card">
+    <div class="card">
       <h2>JavaScript</h2>
       <p>JavaScript is a high-level programming language that enables interactive web pages. Dive into the world of JavaScript to add dynamic behavior and functionality to your web projects.</p>
       <!-- Additional Features -->
@@ -187,7 +137,7 @@
     </div>
 
     <!-- Frontend Frameworks Section -->
-    <div id="section4" class="card">
+    <div class="card">
       <h2>Frontend Frameworks</h2>
       <p>Frontend frameworks like React, Vue, and Angular provide powerful tools for building modern web applications. Explore the features and advantages of popular frontend frameworks.</p>
       <!-- Additional Features -->
@@ -210,7 +160,7 @@
     </div>
 
     <!-- Backend Technologies Section -->
-    <div id="section5" class="card">
+    <div class="card">
       <h2>Backend Technologies</h2>
       <p>Backend technologies handle server-side logic, databases, and application functionality. Explore the world of backend development with languages like Node.js, Python, and Ruby, and learn about databases and server deployment.</p>
       <!-- Additional Features -->
@@ -231,8 +181,6 @@
       <button onclick="toggleSummary('backendSummary')">Toggle Summary</button>
       <p id="backendSummary" style="display: none;">Dive into backend development to handle server-side logic, manage databases, and optimize application performance. Learn languages like Node.js, Python, or Ruby for powerful backend solutions.</p>
     </div>
-
-    <!-- Add more sections as needed -->
 
   </div>
 

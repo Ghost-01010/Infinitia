@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Infinitia</title>
+    <style>
+
+body {
+    background-color: black;
+    text-align: center;
+    justify-content: center;
+}        
+
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(201, 187, 187, 0.6);
+  --animation-color: #06d8df;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+</style>
+
+<!-- 16x16 pixel favicon -->
+<link rel="icon" href="Icon.png" sizes="16x16" type="Icon/png">
+
+<!-- 32x32 pixel favicon -->
+<link rel="icon" href="Icon.png" sizes="32x32" type="Icon/png">
+
+</head>
+<body>
+    <button class="button" data-text="Awesome">
+        <span class="actual-text">&nbsp;Version<strong>2.0</strong>&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;Version<strong>2.0</strong>&nbsp;</span>
+      </button> 
+      <p style="color: aqua; font-size: 60px;">
+          Click or hover over the text.
+      </p>
+</body>
+</html>

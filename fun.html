@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Zone | Infinitia</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        .glass {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 10px;
+            /* Remove position: fixed; */
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .card {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            margin: 30px auto;
+            max-width: 600px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            transition: background-color 0.3s ease-in-out;
+            /* Remove position: fixed; */
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        nav a:hover {
+            opacity: 0.9;
+        }
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin-top: 70px;
+        }
+
+        nav a:link {
+            color: #18dfce;
+        }
+
+        #section1, #section2, #section3, #section4, #section5, #section6 {
+            text-align: center;
+            color: #fff;
+        }
+
+        @media only screen and (max-width: 600px) {
+    .card {
+        max-width: 90%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin: 5px;
+    }
+} 
+    </style>
+
+    <!-- 16x16 pixel favicon -->
+<link rel="icon" href="Icon.png" sizes="16x16" type="Icon/png">
+
+<!-- 32x32 pixel favicon -->
+<link rel="icon" href="Icon.png" sizes="32x32" type="Icon/png">
+</head>
+<body>
+
+    <nav>
+        <a href="fun.html" style="color: #18dfce;">Games Corner</a>
+        <a href="other_fun.html" style="color: #18dfce;">Other Fun</a>
+    </nav>
+
+    <div id="container">
+        <div class="card glass">
+            <p>Are you bored of doing you tasks and work. Just play this game to enojoy the level of satisfaction.</p>
+            <p>Don't Hesistate</p>
+            <p>Just click!!!</p>
+            <p><a href="cube_smash.html" style="color: #18dfce;">Cube Smash</a></p>
+        </div>
+
+        <div class="card glass">
+            <p>~A Challenge for you~</p>
+            <p>How much things you can keep in your mind for a short time?</p>
+            <p>This game is just for that purpose</p>
+            <p>Get to know it</p>
+            <p><a href="card_memory_flip.html" style="color: #18dfce;">Memory Test by Card Flip</a></p>
+        </div>
+
+        <div class="card glass">
+            <p>Have you ever played the game stone, paper, scissor, with your friends in your childhood?</p>
+            <p>I Have played with my friends</p>
+            <p>Now you can play with AI or computer</p>
+            <p><a href="stone_paper_scissor.html" style="color: #18dfce;">Stone Paper Scissor</a></p>
+        </div>
+
+        <div class="card glass">
+            <p>I know that you have also played Tic Tac Toe in copy to do some time pass</p>
+            <p>All have done that!!</p>
+            <p>Get one more chance</p>
+            <p><a href="tic_tac_toe.html" style="color: #18dfce;">Tic Tac Toe</a></p>
+        </div>
+
+        <div class="card glass">
+            <p>Is your eyesight strong enough?</p>
+            <p>There is a game in which you have tp find waldo that is wriiten with the help of magnifying glass</p>
+            <p>Find it here</p>
+            <p><a href="where_is_waldo.html" style="color: #18dfce;">Where is Waldo</a></p>
+        </div>
+
+        <div class="card glass">
+            <p>Sometimes when we search anything and we don't have data the chrome just opens the dino game.</p>
+            <p>And then we keep playing it and that's another level of fun.</p>
+            <p>Want that fun again?</p>
+            <p>Play it here !</p>
+            <p><a href="dino.html" style="color: #18dfce;">Chrome Dino</a></p>
+        </div>
+
+        <div class="card glass">
+            <p>Do you know about Flappy Birds?</p>
+            <p>Yes that game in which a bird and lots of pipe are there.</p>
+            <p>Play it here !</p>
+            <p><a href="flappy_bird.html" style="color: #18dfce;">Flappy Birds</a></p>
+        </div>
+
+        <div class="card glass">
+            <p>Have you ever played some games like fighting?</p>
+            <p>In this game you can play with human or also with computer</p>
+            <p>Fight with each other and have fun.</p>
+            <p>Play it here !</p>
+            <p><a href="spaceship_wars.html" style="color: #18dfce;">Spaceship Wars</a></p>
+        </div>
+
+        <div class="card glass">
+            <p>Bored to do something?</p>
+            <p>Have a night ride here.</p>
+            <p>Enjoy you ride!</p>
+            <p><a href="night_ride.html" style="color: #18dfce;">Night Ride</a></p>
+        </div>
+
+        <div class="card glass">
+            <p>Have you ever solved any maze.</p>
+            <p>You can again try it here to solve it.</p>
+            <p>Just click here.</p>
+            <p><a href="random_maze.html" style="color: #18dfce;">Random Maze</a></p>
+        </div>
+
+        <div class="card glass">
+            <p>Are you friends always taunting you?</p>
+            <p>Don't say anything to your friend</p>
+            <p>Open this game and give to them.</p>
+            <p><a href="catch_it.html" style="color: #18dfce;">Nice Treat</a></p>
+        </div>
+
+        <div class="card glass">
+            <p>Do you know how to solve Rubik's cube?</p>
+            <p>I don't know how to solve. <br>If you know then just solve this Rubik's Cube</p>
+            <p>Solve here !!</p>
+            <p><a href="rubik's_cube.html" style="color: #18dfce;">Rubik's Cube</a></p>
+        </div>
+    
+        </div>
+    </div>
+
+</body>
+</html>
