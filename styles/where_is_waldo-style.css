@@ -1,0 +1,28 @@
+body {
+	margin: 0 auto;
+	background: #111;
+}
+.ww {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 100%;
+	width: calc(100% - 5px);
+	cursor: none;
+}
+
+#zoomSlider {
+	position: absolute;
+	transform: translate(-50%, -50%) rotate(-90deg);
+	border: 2px solid red;
+	width: calc(100vh - 10px);
+	top: 50%;
+	left: 5px;
+	cursor: pointer;
+	z-index: 100;
+	opacity:0.5;
+}
+#zoomSlider:hover {
+	opacity: 0.9;
+}

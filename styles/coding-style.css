@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #fff;
+    overflow-x: hidden;
+  }
+
+  header {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    border-bottom: 2px solid #555; /* Adding a border  */
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Glassy effect with white color */
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  nav a:hover {
+    opacity: 0.7;
+  }
+
+  #container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .card {
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+    position: relative;
+  }
+
+  h1,
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card[id^="section"] {
+    background-color: #888;
+    border: 1px solid #555; /* Border */
+  }
+
+  /* Special container for code display */
+  .code-container {
+    max-width: 100%;
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 15px;
+  }
+
+  .code-output {
+    background-color: #232323;
+    color: #00ff00;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+  /* Updated styles for the toggle button */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  /* New styling for glass effect */
+  .glass {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* New section with glass effect */
+  .card.glass {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  p[id$="Summary"] {
+    transition: max-height 0.5s ease-out; /* Adding a smooth transition for summary */
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  /* Scrollbar styles */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #555;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #333;
+  }
