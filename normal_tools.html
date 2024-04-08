@@ -4,97 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Normal Tools | Infinitia</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #121212;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            color: #fff;
-        }
-
-        .glass {
-            backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 10px;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        .card {
-            background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-            margin: 30px auto;
-            max-width: 600px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .card:hover {
-            transform: scale(1.02);
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background-color 0.3s ease-in-out;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 10px;
-            transition: background-color 0.3s ease-in-out;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            transition: opacity 0.4s ease-in-out;
-        }
-
-        nav a:hover {
-            opacity: 0.9;
-        }
-
-        #container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            margin-top: 70px; 
-        }
-
-        nav a:link {
-            color: #18dfce;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .card {
-                max-width: 90%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/normal_tools-style.css">
 
     <!-- 16x16 pixel favicon -->
 <link rel="icon" href="Icon.png" sizes="16x16" type="Icon/png">
@@ -148,7 +58,15 @@
             <p>Get it here</p>
             <p><a href="movie_app.html" style="color: #18dfce;">Movies</a></p>
         </div>
+
+        <div class="card glass">
+            <p>Do you know about Pixel Art ?</p>
+            <p>Or have seen I think you must have seen in the reels or shorts.</p>
+            <p>You can also create one like there </p>
+            <p><a href="pixel_art_generator.html" style="color: #18dfce;">Movies</a></p>
+        </div>
     </div>
 
 </body>
+<script src="./scripts/normal_tools-script.js"></script>
 </html>

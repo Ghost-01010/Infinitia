@@ -5,55 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Development | Infinitia</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
-
-    header {
-      background-color: #333;
-      padding: 15px;
-      text-align: center;
-      color: #fff;
-    }
-
-    #container {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card {
-      margin: 20px;
-      padding: 20px;
-      box-sizing: border-box;
-      border-radius: 10px;
-      background-color: #333;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      animation: fadeIn 1s ease-out;
-    }
-
-    h1, h2, p {
-      margin: 0;
-      padding: 0;
-    }
-
-    /* Scroll Animation */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="./styles/web_development-style.css">
 
   <!-- 16x16 pixel favicon -->
 <link rel="icon" href="Icon.png" sizes="16x16" type="Icon/png">
@@ -184,24 +136,6 @@
 
   </div>
 
-  <script>
-    function toggleSummary(summaryId) {
-      var summary = document.getElementById(summaryId);
-      summary.style.display = summary.style.display === 'none' ? 'block' : 'none';
-    }
-
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
-
 </body>
-
+<script src="./scripts/web_development-script.js"></script>
 </html>

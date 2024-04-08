@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryptor | Infinitia</title>
+    <link rel="stylesheet" href="./styles/text_encryptor-style.css">
+
+    <style>
+
+    </style>
+    <!-- 16x16 pixel favicon -->
+    <link rel="icon" href="Icon.png" sizes="16x16" type="Icon/png">
+
+    <!-- 32x32 pixel favicon -->
+    <link rel="icon" href="Icon.png" sizes="32x32" type="Icon/png">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Text Encryptor</h1>
+        <label for="message">Message :</label>
+        <textarea id="message" rows="5">This is a program to encrypt your message or text with password.</textarea>
+        <label for="key">Key :</label>
+        <input type="text" id="key" value="Password">
+        <div class="buttons">
+            <button id="enc-btn">Encrypt</button>
+            <button id="dec-btn">Decrypt</button>
+        </div>
+
+        <h2>Result:</h2>
+        <div id="result">
+            <div id="result-text"></div>
+        </div>
+    </div>
+
+</body>
+<script src="./scripts/text_encryptor-script.js"></script>
+</html>

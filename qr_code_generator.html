@@ -1,127 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator | Infinitia</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to right, #1d1d1d, #343434);
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-        h1 {
-            font-size: 3em;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-        label {
-            font-size: 1.5em;
-        }
-        input {
-            padding: 15px;
-            margin: 15px 0;
-            width: 80%;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 5px;
-            background: rgba(255, 255, 255, 0.3);
-            color: #000;
-        }
-        button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 15px 25px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.5em;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-        #output {
-            margin-top: 30px;
-        }
-        #imageContainer {
-            margin-top: 30px;
-            max-width: 100%;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-        }
-        #generatedImage {
-            width: 100%;
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/qr_code_generator-style.css">
+    <title>Qr Code Generator | Infinitia</title>
 
-    <!-- 16x16 pixel favicon -->
+<!-- 16x16 pixel favicon -->
 <link rel="icon" href="Icon.png" sizes="16x16" type="Icon/png">
 
 <!-- 32x32 pixel favicon -->
 <link rel="icon" href="Icon.png" sizes="32x32" type="Icon/png">
 </head>
+
 <body>
 
-    <h1>QR Code Generator</h1>
-    
-    <form onsubmit="event.preventDefault(); generateQR();">
-        <label for="url">Enter the URL:</label>
-        <input type="text" id="url" placeholder="https://example.com" onkeydown="if(event.key==='Enter') generateQR()">
-        <button onclick="generateQR()">Generate QR Code</button>
-    </form>
+    <section>
+        <div class="row">
+            <input type="color" class="light" value="#ffffff">
+            <input type="color" class="dark">
+            <select class="sizes">
+                <option value="100">100×100</option>
+                <option value="200">200×200</option>
+                <option value="300">300×300</option>
+                <option selected value="400">400×400</option>
+                <option value="500">500×500</option>
+                <option value="600">600×600</option>
+                <option value="700">700×700</option>
+                <option value="800">800×800</option>
+                <option value="900">900×900</option>
+                <option value="1000">1000×1000</option>
+            </select>
+        </div>
+        <input type="text" class="qr-text" placeholder="Enter QR Text">
+        <div id="qr-code"></div>
+        <div class="action-container">
+            <a href="#" class="download btn" download="QRCode">
+                <span>Download</span>
+                <img src="qr_code_generator-download.svg" alt="">
+            </a>
+            <button class="btn share-btn">
+                <span>Share</span>
+                <img src="qr_code_generator-share.svg" alt="">
+            </button>
+        </div>
+    </section>
 
-    <div id="output"></div>
-
-    <div id="imageContainer">
-        <img id="generatedImage" src="https://via.placeholder.com/800x400" alt="Generated QR Code">
-    </div>
-
-    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
-    <script>
-        function generateQR() {
-            var url = document.getElementById('url').value;
-            var outputDiv = document.getElementById("output");
-            var imageContainer = document.getElementById("imageContainer");
-
-            // Clear previous QR code and image
-            outputDiv.innerHTML = '';
-            imageContainer.innerHTML = '';
-
-            if (url.trim() !== '') {
-                var qrcode = new QRCode(outputDiv, {
-                    text: url,
-                    width: 256,
-                    height: 256
-                });
-
-                // Display QR code as an image
-                var qrImage = new Image();
-                qrImage.src = outputDiv.firstChild.toDataURL("image/png");
-                imageContainer.appendChild(qrImage);
-            } else {
-                alert('Please enter a valid URL.');
-            }
-        }
-    </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="./scripts/qr_code_generator-script.js"></script>
 </body>
+
 </html>
