@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
+  }
+  body, html {
+    width: 100%;
+    height: 100%;
+    background: #1d1d1d;
+  }
+  #container {
+    height: 500px;
+    width: 1000px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url("https://i.postimg.cc/9Q1rrwfP/flappy-bird-background-png-6.png"), url("https://i.postimg.cc/9Q1rrwfP/flappy-bird-background-png-6.png"), url("https://i.postimg.cc/9Q1rrwfP/flappy-bird-background-png-6.png");
+    background-size: 100% 100%;
+    background-position: -800px 0, 0 0, 800px 0;
+    overflow: hidden;
+  }
+  #barrier-container {
+    height: 100%;
+    width: 100%;
+  }
+  #barrier-container .barrier-top,
+  #barrier-container .barrier-bottom {
+    background: url("https://i.postimg.cc/QMXDcS6B/flappy-barrier-top-small.png"), url("https://i.postimg.cc/W4fyt7xc/flappy-barrier-small.png");
+    width: 24px;
+    position: absolute;
+    background-repeat: no-repeat, repeat;
+  }
+  #barrier-container .barrier-top {
+    top: 0;
+    background-position: bottom, bottom;
+  }
+  #barrier-container .barrier-bottom {
+    bottom: 0;
+  }
+  #barrier-container .barrier-top.hit,
+  #barrier-container .barrier-bottom.hit {
+      background-image: url("https://i.postimg.cc/4N6mz9mH/flappy-barrier-top-small-red.png"), url("https://i.postimg.cc/DykSJgyK/flappy-barrier-small-red.png");
+  }
+  #bird {
+    height: 24px;
+    width: 30px;
+    position: absolute;
+    left: 20%;
+    top: 250px;
+    transform: translateY(-50%);
+    background: url("https://i.postimg.cc/JzgjSPmk/flappy-bird.png");
+    z-index: 10;
+    display: none;
+  }
+  #container>p {
+    display: none;
+  }
+  #start_page {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #start_button {
+    height: 92px;
+    width: 162px;
+    background: url("https://i.postimg.cc/PrB4D6Md/flappy-start.png");
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+  #start_page>p {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    display: none;
+    user-select: none;
+  }
+  #restart {
+    padding: 5px;
+    text-align: right;
+    cursor: pointer;
+    display: none;
+  }
+  #controls {
+    text-align: center;
+    position: absolute;
+    top: 310px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 25px;
+    white-space: nowrap;
+    cursor: pointer;
+    line-height: 40px;
+  }
+  .score_wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    user-select: none;
+    padding: 5px;
+  }

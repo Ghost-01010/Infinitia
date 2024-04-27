@@ -1,0 +1,136 @@
+:root {
+    --clr-fg: #fff7;
+    --clr-active-fg: #fff9;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  canvas {
+    position: fixed;
+    z-index: -2;
+    width: 100%;
+    height: auto;
+    inset: 0;
+    user-select: none;
+  }
+  
+  .control {
+    display: grid;
+    place-content: center;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    inset: 0;
+    margin: auto;
+  }
+  
+  .control_label {
+    opacity: 0;
+    display: grid;
+    place-content: center;
+    transition: opacity 1200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  .control.initial .control_label {
+    opacity: 1;
+  }
+  
+  .control:hover .control_label {
+    opacity: 1;
+  }
+  
+  .control_display,
+  .control_input {
+    grid-row: 1/-1;
+    grid-column: 1/-1;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .control_display {
+    display: grid;
+    place-content: center;
+    font-size: 0.825em;
+    font-weight: 500;
+  }
+  
+  .control_display svg {
+    --duration: 50ms;
+    display: inline-block;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    fill: var(--clr-fg);
+    transition: var(--duration);
+    transform: scale(1.1);
+  }
+  
+  .control_display svg .speaker-vol {
+    stroke-linecap: round;
+  }
+  
+  .control_display svg .speaker-on {
+    fill: none;
+    stroke: none;
+    opacity: 0;
+    transition: opacity var(--duration);
+  }
+  
+  .control_label:has([type="checkbox"]:checked) svg {
+    fill: var(--clr-active-fg);
+  }
+  
+  .control_label:has([type="checkbox"]:checked) svg .speaker-on {
+    opacity: 1;
+    fill: var(--clr-active-fg);
+  }
+  
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    position: relative;
+    margin: 0;
+    width: 6em;
+    height: 6em;
+    transform: scale(1);
+    font: inherit;
+    color: currentColor;
+    border-width: 0.15rem;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: var(--clr-fg);
+    display: grid;
+    place-content: center;
+    background: #11111199;
+    box-shadow: 0px 0px 12px 0 #a5a5a5;
+  }
+  
+  input[type="checkbox"]:hover {
+    transform: scale(1.1);
+    transition: 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  
+  input[type="checkbox"]:is(:checked, :active),
+  input[type="checkbox"]:is(:checked, :active) + .control_display svg {
+    transform: scale(1);
+  }
+  
+  input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: 0 2px 5px 2px #fff9, 0 2px 10px 10px #fff7, 0 2px 20px 20px #fff5;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: 400ms;
+  }
+  
+  input[type="checkbox"]:hover::after {
+    transform: scale(1.05);
+    opacity: 1;
+  }

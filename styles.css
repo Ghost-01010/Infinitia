@@ -1,0 +1,430 @@
+/* Loading animation styles */
+#loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.705);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1.5s ease-in-out; /* Smooth fade-in and fade-out */
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.705);
+    transition: opacity 1.5s ease-in-out, background-color 0.5s ease; /* Smooth fade-in, fade-out, and background color change on hover */
+}
+
+#loading-container:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background color on hover */
+}
+
+.loading-text {
+    font-size: 32px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    animation: colorChange 0.1s infinite linear; /* Color-changing effect */
+}
+
+.letter {
+    font-weight: bold;
+    animation: rotate 0.5s infinite linear; /* Rotating effect */
+    transform-origin: center;
+}
+
+.dots {
+    font-size: 30px;
+    animation: colorChange 0.1s infinite linear; /* Color-changing effect */
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes colorChange {
+    0%, 25% { color: #e74c3c; }
+    25%, 40% { color: #f1c40f; }
+    40%, 50% { color: #2ecc71; }
+    50%, 75% { color: #3498db; }
+    75%, 100% { color: aqua;}
+}
+
+@keyframes loadingAnimation {
+    0% {
+        /* Start of animation */
+        transform: rotate(0deg);
+    }
+    100% {
+        /* End of animation */
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    animation: loadingAnimation 3s linear infinite; /* Set the duration to 3 seconds */
+}
+
+/* Delayed hiding */
+#loading-container.hide {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 5s ease-in-out;
+}
+
+/* Show the body content after the loader is hidden */
+#loading-container.hide + #website-content {
+    display: block;
+}
+
+/* Hide the website content until the loader is hidden */
+#website-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Reset some default styles */
+html, body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Special Elite', cursive;
+    background-color: rgb(19, 18, 18);
+    color: rgb(0, 0, 0);
+    line-height: 1.6;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb{
+    background:linear-gradient(red,green,blue,yellow);
+    border-radius: 10px;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #aa00d4;
+    z-index: 100;
+    transition: background-color 0.5s ease-in-out; /* Smooth background color change on scroll */
+    display: flex; 
+    align-items: center; 
+}
+
+header.sticky {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.header-content {
+    margin-top: 20px; 
+}
+
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #054e53;
+    z-index: 100;
+    transition: background-color 0.8s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center-align items horizontally */
+    height: 60px; /* Adjust the height as needed */
+    padding: 0 20px; /* Add padding as needed */
+    border-radius: 30px; /* Add border-radius to make corners curved */
+    background-color: rgba(14, 13, 13, 0.51);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(10px);
+    outline: 0px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav.sticky {
+    background-color: #333; /* Change background color when sticky */
+}
+
+.nav-link {
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease; /* Transition both transform and color */
+    text-decoration: none; 
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.nav-link:hover {
+    transform: translateY(-5px) scale(1.05); /* Lift the link and scale on hover */
+    color: #007bff; /* Change text color on hover */
+}
+
+.nav-link:hover::before {
+    background-position: left bottom; /* Move the gradient background to the left */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Add this line */
+    justify-content: center; /* Add this line */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px; /* Adjust the font size as needed */
+    padding: 10px 12px; /* Add padding as needed */
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-link::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: linear-gradient(to right, transparent 50%, #007bff 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.3s ease; /* Smoothly move the gradient background */
+    z-index: -1; /* Place the background behind the text */
+}
+
+.nav-link:hover {
+    transform: translateY(-5px) scale(1.05); /* Lift the link and scale on hover */
+    color: #007bff; /* Change text color on hover */
+    text-decoration: underline;
+}
+
+.nav-link:hover::before {
+    background-position: left bottom; /* Move the gradient background to the left */
+}
+
+/* Active state styling (for the current page) */
+.nav-link.active {
+    font-weight: bold; /* Highlight the active link with bold text */
+}
+
+.dropdown {
+    position: relative;
+}
+
+/* Position the dropdown relative to the parent */
+.dropdown-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    top: 100%; /* Position the dropdown below the parent */
+    left: 0; /* Align the dropdown with the left edge of the parent */
+    border-radius: 10px;
+}
+
+/* When the dropdown is open, make it visible and set opacity to 1 */
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Style for dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Hero section styles */
+.hero {
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for depth */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Define CSS styles for the changing text */
+#changing-span {
+    color: transparent; /* Hide the text initially */
+  background: linear-gradient(to right, transparent 50%, blue 50%); /* Create a text reveal effect */
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: background-position 0.3s ease-in-out;
+}
+  
+  /* Define the CSS styles for the cursor animation */
+  .typed-cursor {
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+  
+/* Content container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Add rounded corners for a modern look */
+}
+
+/* Social media icons */
+.social-icons {
+    text-align: center;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add transform and opacity transitions */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Increase size on hover */
+    opacity: 0.7; /* Adjust the opacity for the fade-out effect */
+}
+
+.social-icon img {
+    width: 25px; 
+    height: 25px; 
+}
+
+/* Contact section styles */
+.contact form {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #0078d4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.contact button:hover {
+    background-color: #0461a3; /* Darker color on hover */
+}
+
+.hover-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 999;
+}
+
+/* Footer styles */
+footer {
+    background-color: #054e53;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute; /* Ensure footer stays at the bottom */
+    width: 100%;
+}
+
+.discord-link {
+    display: inline-block; /* Make the link a block element */
+    margin: 20px auto; /* Center-align the link vertically */
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+/* Social media icons */
+.social-media a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-media a:hover {
+    color: #005ea2; /* Darker color on hover */
+}
+
+
+/*Theme Switch button*/
