@@ -1,0 +1,1 @@
+// No Javascript for coming soon
