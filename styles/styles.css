@@ -97,10 +97,11 @@ html, body, h1, h2, h3, p {
 body {
     font-family: 'Special Elite', cursive;
     background-color: rgb(19, 18, 18);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     line-height: 1.6;
     text-align: center;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body::-webkit-scrollbar{
@@ -110,6 +111,83 @@ body::-webkit-scrollbar{
 body::-webkit-scrollbar-thumb{
     background:linear-gradient(red,green,blue,yellow);
     border-radius: 10px;
+}
+
+/* Gradient Text Effect */
+#welcome-text {
+    color: white;
+    font-size: 3rem; /* Adjust as needed */
+    font-family: 'Montserrat', sans-serif; /* Ensure your desired font is applied */
+    font-weight: bold; /* Optional: make the text bold */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    text-align: center; /* Center-align the text */
+    padding: 20px; /* Add padding for better spacing */
+    animation: multiColorGlow 3s ease-in-out infinite;
+}
+
+.tricolor {
+    display: inline-block; /* Ensure each word or letter is treated as a block for gradient */
+    background: linear-gradient(135deg, #ff9933, #ffffff, #138808); /* Indian tricolor gradient */
+    background-size: 300% 300%; /* Scale the background for a more dynamic effect */
+    color: transparent; /* Hide the default text color */
+    -webkit-background-clip: text; /* For WebKit browsers */
+    background-clip: text; /* For non-WebKit browsers */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for better readability */
+    animation: gradientShift 5s linear infinite; /* Animation for gradient movement */
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Additional glow effect */
+.tricolor {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes multiColorGlow {
+    0% {
+        text-shadow: 
+            0 0 5px #ff9933, /* Saffron */
+            0 0 10px #ff9933, 
+            0 0 15px #ff9933, 
+            0 0 20px #ffffff, /* White */
+            0 0 20px #ffffff, 
+            0 0 30px #009688; /* Green */
+    }
+    40% {
+        text-shadow: 
+            0 0 10px #ff9933, /* Saffron */
+            0 0 20px #ff9933, 
+            0 0 30px #ff9933, 
+            0 0 15px #ffffff, /* White */
+            0 0 20px #009688; /* Green */
+    }
+    70% {
+        text-shadow: 
+            0 0 30px #009688, /* Green */
+            0 0 50px #009688, 
+            0 0 60px #009688, 
+            0 0 10px #ffffff, /* White */
+            0 0 20px #ff9933; /* Saffron */
+    }
+    100% {
+        text-shadow: 
+            0 0 15px #ff9933, /* Saffron */
+            0 0 30px #ff9933, 
+            0 0 45px #ff9933, 
+            0 0 5px #ffffff, /* White */
+            0 0 10px #009688; /* Green */
+    }
 }
 
 /* Header styles */
@@ -280,7 +358,7 @@ nav a {
 .hero {
     background-size: cover;
     text-align: center;
-    padding: 100px 0;
+    padding: 50px 20px;
     color: #fff;
 }
 
@@ -324,7 +402,7 @@ nav a {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgb(56, 56, 56);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px; /* Add rounded corners for a modern look */
 }
@@ -381,7 +459,7 @@ nav a {
 }
 
 .contact button:hover {
-    background-color: #0461a3; /* Darker color on hover */
+    background-color: #0461a4; /* Darker color on hover */
 }
 
 .hover-card {
@@ -399,7 +477,7 @@ nav a {
 
 /* Footer styles */
 footer {
-    background-color: #054e53;
+    background-color: #00646bc0;
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -428,3 +506,111 @@ footer {
 
 
 /*Theme Switch button*/
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+  }
+  
+  .sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .moon svg {
+    fill: #73C0FC;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* .switch:hover */.sun svg {
+    animation: rotate 15s linear infinite;
+  }
+  
+  @keyframes rotate {
+   
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* .switch:hover */.moon svg {
+    animation: tilt 5s linear infinite;
+  }
+  
+  @keyframes tilt {
+   
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-10deg);
+    }
+  
+    75% {
+      transform: rotate(10deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .input:checked + .slider {
+    background-color: #183153;
+  }
+  
+  .input:focus + .slider {
+    box-shadow: 0 0 1px #183153;
+  }
+  
+  .input:checked + .slider:before {
+    transform: translateX(30px);
+  }
