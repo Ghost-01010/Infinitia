@@ -7,13 +7,15 @@
     <title>Infinitia Official</title>
     <link rel="stylesheet" href="./styles/styles.css">
 
-<!-- 16x16 pixel favicon -->
+    <!-- 16x16 pixel favicon -->
 <link rel="icon" href="Icon.png" sizes="16x16" type="Icon/png">
+
 <!-- 32x32 pixel favicon -->
 <link rel="icon" href="Icon.png" sizes="32x32" type="Icon/png">
 
-<link href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 </head>
 <body class="loading">
@@ -66,23 +68,26 @@
 
                 <li><a class="nav-link" href="featured.html">Featured</a>
                 </li>
-                <li>
-                    <div>
-                        <input type="checkbox" class="checkbox" id="checkbox">
-                        <label for="checkbox" class="checkbox-label">
-                            <i class="fas fa-sun"></i>
-                            <i class="fas fa-moon"></i>
-                            <span class="ball"></span>
-                        </label>
-                    </div>
-                </li>
+                <label class="switch">
+                    <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
+                    <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>   
+                    <input type="checkbox" class="input">
+                    <span class="slider"></span>
+                </label>
             </ul>
         </nav>
     </header>
     
     
     <section id="home" class="hero">
-        <h1>Welcome to the world of Infinitia</h1>
+        <h1 id="welcome-text">
+            <span class="tricolor">Welcome</span> 
+            <span class="tricolor">to</span> 
+            <span class="tricolor">the</span> 
+            <span class="tricolor">world</span> 
+            <span class="tricolor">of</span> 
+            <span class="tricolor">Infinitia</span>
+        </h1>
         <h2 style="font-size: 32px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: gold;">By Developer for developers!!</h2>
         <h2 id="changing-text" class="text-xl font-semibold text-gray-800 md:text-2xl dark:text-white">Discover The Truth of <span id="changing-span" class="text-purple-700 dark:text-purple-600">programming</span><span class="typed-cursor" aria-hidden="true">|</span></h2>
         <h2 style="font-size: 25px; color: rgb(7, 158, 158);">An <a href="https://github.com/Ghost-01010/Infinitia/" style="color: rgb(7, 158, 158);">Open-Source</a> Project</h2>
@@ -149,7 +154,7 @@
             
             <div class="connect">
                 <p>Connect with me on Discord:</p>
-                <a href="https://discord.com/users/$ghost#6890" target="_blank">Discord</a>
+                <p style="color: #0461a4;"><a href="https://discord.com/users/$ghost#6890" target="_blank">Discord</a></p>
             </div>
         </div>
     </section>
